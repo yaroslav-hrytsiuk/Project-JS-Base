@@ -1,0 +1,119 @@
+body {
+    background: linear-gradient(45deg, #fff, #000);
+}
+.container {
+    font-family: 'Handlee', cursive;
+    min-height: 100vh;
+    height: 100%;
+}
+.row {
+    display: flex;
+    justify-content: center;
+}
+.ball {
+    margin-top: 50px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px;
+}
+.ball-middle {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 250px;
+    height: 250px;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: -2;
+}
+.text-in-ball {
+    background: url(img/triangle.png) no-repeat;
+    background-size: 220px 220px;
+    margin-top: 20px;
+    position: absolute;
+    padding: 40px;
+    top: 14%;
+    left: 6%;
+    width: 220px;
+    height: 200px;
+    color: #fff;
+    z-index: -1;
+    vertical-align: middle;
+    text-align: center;
+    text-align-last: center;
+}
+.input-row {
+    margin: 40px 0;
+}
+input{
+    padding: 10px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #555555
+}
+input:focus {
+    outline: none;
+}
+#name {
+    border-radius: 20px 0 0 20px;
+    width: 200px
+}
+#question {
+    border-radius: 0 20px 20px 0;
+    width: 300px;
+}
+#button {
+    margin-top: 5px;
+    background: transparent;
+    border: 3px solid #eedd33;
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px 10px;
+}
+#button:focus {
+    outline: none;
+}
+#button:active {
+    border: 3px solid #42d3c0;
+}
+.answers {
+    padding-top: 50px;
+    display: flex;
+}
+.answers .col-md-3 {
+    display: flex;
+    flex-direction: column;
+}
+.name-result {
+    font-weight: bolder;
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+.result {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    list-style: none;
+    counter-reset: li;
+    padding: 0;
+}
+.result li {
+    position: relative;
+    margin-bottom: 1.5em;
+    padding: 10px;
+    border-radius: 4px;
+    background: #FEFEFE;
+    color: #231F20;
+}
+.result li::before {
+    position: absolute;
+    top: -10px;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #eedd33;
+    background: #fff;
+    border-radius: 50%;
+    counter-increment: li;
+    content: counter(li);
+}
